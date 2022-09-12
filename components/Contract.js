@@ -16,15 +16,22 @@ const Contract = ({ balance, quote_rate, name, logo_url, ticker }) => {
                 flex: 1,
                 flexDirection: 'column'
             }}>
-                <Text>{name}</Text>
-                <Text>{ticker}</Text>
+                <Text style = {{
+                    fontWeight : 'bold',
+                    fontSize : 15
+                }}>{name}</Text>
+                <Text style = {{
+                    fontSize : 10
+                }}>{ticker}</Text>
             </View>
             <View style={{
                 flex: 1,
                 flexDirection: 'column'
             }}>
-                <Text style={styles.balanceStyle}>{balance}</Text>
-                <Text>{quote_rate}</Text>
+                <Text style={styles.balanceStyle}>${balance}</Text>
+                <Text style={{
+                    fontSize : 10
+                }}>{quote_rate}</Text>
             </View>
         </View>
         <View
@@ -52,7 +59,9 @@ const styles = StyleSheet.create({
     },
     balanceStyle:
     {
-        alignItems: "flex-end"
+        alignItems: "flex-end",
+        fontWeight : 'bold',
+        fontSize : 15
     }
 })
 
