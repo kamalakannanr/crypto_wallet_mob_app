@@ -7,16 +7,25 @@ import { NavigationContainer } from '@react-navigation/native';
 import Browser from './Browser';
 import Shortcuts from './Shortcuts';
 import Options from './Options';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
   return (
     <Tab.Navigator initialRouteName='Portfolio'>
-      <Tab.Screen name="Browser" component={Browser}  />
-      <Tab.Screen name="Portfolio" component={Balance}  />
-      <Tab.Screen name="Shortcuts" component={Shortcuts}  />
-      <Tab.Screen name="Options" component={Options}  />
+      <Tab.Screen name="Browser" component={Browser} options={{ tabBarIcon : ({ color, size }) => (
+            <MaterialCommunityIcons name="globe-light" color={color} size={size}/>),
+          }}/>
+      <Tab.Screen name="Portfolio" component={Balance}  options={{ tabBarIcon : ({ color, size }) => (
+            <MaterialCommunityIcons name="chart-pie" color={color} size={size}/>),
+          }}/>
+      <Tab.Screen name="Shortcuts" component={Shortcuts}  options={{ tabBarIcon : ({ color, size }) => (
+            <MaterialCommunityIcons name="vector-link" color={color} size={size}/>),
+          }}/>
+      <Tab.Screen name="Options" component={Options}  options={{ tabBarIcon : ({ color, size }) => (
+            <MaterialCommunityIcons name="more" color={color} size={size}/>),
+          }}/>
     </Tab.Navigator>
   );
 }

@@ -3,6 +3,7 @@ import React from "react";
 import {
   View,
   Text,
+  Image,
   StyleSheet,
   FlatList,
   Platform,
@@ -52,48 +53,71 @@ class Balance extends Component {
       <View
         style={{
           flex: 1,
-          marginTop: Platform.OS === "ios" ? 34 : 0,
+          marginTop: Platform.OS === "ios" ? 5 : 0,
         }}
       >
         <View
           style={{
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "left",
-            height: 120,
+            flexDirection: "row",
           }}
         >
-          <Text
+          <View
             style={{
-              fontSize: 18,
-            }}
-          >
-            Total balance
-          </Text>
-          <Text
-            style={{
-              fontSize: 30,
-              fontWeight: "bold",
-            }}
-          >
-            $90
-          </Text>
-          <TouchableOpacity
-            style={{
-              backgroundColor: "gold",
-              padding: 10,
-              borderRadius: 15,
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "left",
+              height: 120,
             }}
           >
             <Text
               style={{
-                color: "black",
+                fontSize: 18,
               }}
             >
-              {" "}
-              Load Wallet
+              Total balance
             </Text>
-          </TouchableOpacity>
+            <Text
+              style={{
+                fontSize: 30,
+                fontWeight: "bold",
+              }}
+            >
+              $90
+            </Text>
+            <TouchableOpacity
+              style={{
+                backgroundColor: "gold",
+                padding: 10,
+                borderRadius: 15,
+              }}
+            >
+              <Text
+                style={{
+                  color: "black",
+                }}
+              >
+                {" "}
+                Load Wallet
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={{
+            flex : 1 ,
+            flexDirection : 'column'
+          }}>
+            </View>
+          <View style={{
+            flexDirection : 'column'
+          }}>
+          <Image
+            style={{
+              height: 120,
+              width: 120,
+              clear : 'right'
+            }}
+            source={require("./assets/wallet.jpeg")}
+          />
+          </View>
         </View>
         <View
           style={{
@@ -108,19 +132,31 @@ class Balance extends Component {
             height: 60,
           }}
         >
-         <View style = {{
-            alignContent: 'flex-start'
-         }}>
-          <Text>Last updated</Text>
-          </View> 
-          <View style = {{
-            alignContent : 'right'
-          }}>
-          <Text style={{
-            justifyContent: 'flex-end'
-          }}>Only verified coins</Text>
+          <View
+            style={{
+              alignContent: "flex-start",
+            }}
+          >
+            <Text>Last updated</Text>
           </View>
-          
+          <View style = {{ 
+            flex : 1
+          }}
+          />
+          <View
+            style={{
+              flex:1,
+              alignContent: "right",
+            }}
+          >
+            <Text
+              style={{
+                justifyContent: "flex-end",
+              }}
+            >
+              Only verified coins
+            </Text>
+          </View>
         </View>
         <View
           style={{
