@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.12",
     "@react-navigation/bottom-tabs": "^6.3.3",
     "expo": "^46.0.0",
     "expo-cli": "^5.5.1",

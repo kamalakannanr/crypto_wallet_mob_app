@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 
-const Contract = ({ balance, quote_rate, name, logo_url, ticker }) => {
+const Contract = ({ value, balance, name, logo_url, ticker }) => {
 
     return <View style={{
         flex: 1,
@@ -28,10 +28,10 @@ const Contract = ({ balance, quote_rate, name, logo_url, ticker }) => {
                 flex: 1,
                 flexDirection: 'column'
             }}>
-                <Text style={styles.balanceStyle}>${balance}</Text>
+                <Text style={styles.balanceStyle}>${value}</Text>
                 <Text style={{
                     fontSize : 10
-                }}>{quote_rate}</Text>
+                }}>{balance}</Text>
             </View>
         </View>
         <View
