@@ -36,7 +36,9 @@ const Contract = ({ value, balance, name, logo_url, ticker }) => {
         </View>
         <View
             style={{
-                height: 0.5,
+                margin : 10,
+                height: 0.3,
+                width : '90%',
                 backgroundColor: 'black'
             }}
         />

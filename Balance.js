@@ -111,7 +111,6 @@ class Balance extends Component {
                   color: "black",
                 }}
               >
-                {" "}
                 Load Wallet
               </Text>
             </TouchableOpacity>
@@ -140,6 +139,8 @@ class Balance extends Component {
         <View
           style={{
             height: 0.5,
+            margin : 5,
+            width: '90%',
             backgroundColor: "black",
           }}
         />
@@ -147,7 +148,7 @@ class Balance extends Component {
         <View
           style={{
             flexDirection: "row",
-            height: 60,
+            height: 20,
           }}
         >
           <View
@@ -179,6 +180,8 @@ class Balance extends Component {
         </View>
         <View
           style={{
+            margin: 5,
+            width : '90%',
             height: 0.5,
             backgroundColor: "black",
           }}
